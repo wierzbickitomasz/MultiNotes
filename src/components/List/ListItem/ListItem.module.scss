@@ -1,0 +1,52 @@
+@keyframes appear { //tworzenie animacji
+    0% {    //na 0% zrenderowania ma takie własnosci:
+        opacity: 0;
+        top: 35px;
+    }
+    100% {  //na 100% zrenderowania ma takie własnosci:
+        opacity: 1;
+        top: 0;
+    }
+}
+  .wrapper {
+      list-style: none;
+      padding: 50px 30px;
+      display: flex;
+      align-items: center;
+      position: relative; //żeby działało to top a animacji
+      animation: appear .5s ease; //dodajemy animacjie, czas trwania, ease, czyli z każdej strony zwolnienie
+  }
+  
+  .image {
+      flex-shrink: 0;
+      margin-right: 30px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+  }
+  
+  .name {
+      margin: 0;
+      color: #1E58FF;
+      font-weight: 700;
+  }
+  
+  .description {
+      margin: 10px 0 20px;
+      font-weight: 300;
+  }
+  
+  .button {
+      font-size: 10px;
+      text-decoration: none;
+      padding: 7px 12px;
+      font-weight: 500;
+      background: none;
+      border: 2px solid #1E58FF;
+      color: #1E58FF;
+  }
+
+  .imageNone { //klasa w przypadku gdy nie doda sie zdjecia
+      @extend .image; //extends (scss), czyli ma te same własnosci co image
+      background: lightgrey;
+  }

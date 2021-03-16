@@ -1,0 +1,22 @@
+.wrapper {
+    display: flex;
+}
+
+.navItem {
+    list-style: none;
+    margin-left: 10px; margin-right: 10px;
+    
+   &Link { //czyli nazwa rodzica + Link, .navItemLink
+        text-decoration: none;
+        color: #818181;
+
+        &Active { //czyli nazwa rodzica + Active, .navItemLinkActive
+            font-weight: 700;
+        }
+   }
+  
+       
+}
+
+
+
